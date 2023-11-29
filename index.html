@@ -13,8 +13,8 @@
 <script>   
   async function obtenerProductos() {    
     try {
-    //  const response = await fetch('https://tiendavirtual.jefersonz1997.repl.co/productos'); 
-      const response = await fetch('https://tiendavirtual.jefersonz1997.repl.co/productosfromGraphql')
+      const response = await fetch('https://tiendavirtual.jefersonz1997.repl.co/productos'); 
+     // const response = await fetch('https://tiendavirtual.jefersonz1997.repl.co/productosfromGraphql')
       if(!response.ok){
          throw new Error('Error en la solicitud');
        }
@@ -33,10 +33,11 @@
       const products = await obtenerProductos();
       let products = "";
       //console.log(products);
-     
-      products.products.forEach((product) => {
+
+      products.forEach(product) => {
+      //products.products.forEach((product) => {
       localStorage.setItem(`product_${product.id}`, JSON.stringify(product));    // template literal se guarda en backtick
-      products += ` <div class = "card" style="width: 18 rem;">
+      productos += ` <div class = "card" style="width: 18 rem;">
       <img src="${product.imagen}" style="width: 100 em" class="card-img-top" alt="...">
       
       <div class="card-body">                                 
@@ -48,7 +49,7 @@
     </div> `;      
         
       });
-    contenedor.innerHTML = products;
+    contenedor.innerHTML = productos;
       });
 </script>
 
