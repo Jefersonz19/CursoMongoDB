@@ -37,7 +37,7 @@
      
       products.forEach((product) => { 
       //products.products.forEach((product) => {
-      //localStorage.setItem(`product_${product.id}`, JSON.stringify(product));    // template literal se guarda en backtick
+      localStorage.setItem(`product_${product.id}`, JSON.stringify(product));    // template literal se guarda en backtick
       productos += ` <div class = "card" style="width: 18 rem;">
       <img src="${product.imagen}" style="width: 100 em" class="card-img-top" alt="...">
       
@@ -52,4 +52,7 @@
       });
     contenedor.innerHTML = productos;
       });
-</script>
+ </script>
+
+  </body>
+</html>
