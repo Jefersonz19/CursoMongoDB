@@ -7,12 +7,12 @@
   <link rel="stylesheet"  type="text/css" />
 </head>
 <body>
-    <div class= "container"></div>
+    <div class= "contenedor"></div>
     <div class= "details"  style="display: none;"></div>
   
 <style>
 
-  .container {
+  .contenedor {
   display: flex;    
   flex-wrap:  wrap;
   justify-content: space-between;
@@ -48,7 +48,7 @@
   // obtenerProductos();
 
    document.addEventListener("DOMContentLoaded", async () => {
-      const container = document.querySelector(".container");
+      const contenedor = document.querySelector(".contenedor");
       const products = await obtenerProductos();
       let products = "";
       //console.log(products);
@@ -67,7 +67,7 @@
     </div> `;      
         
       });
-    container.innerHTML = products;
+    contenedor.innerHTML = products;
       });
 </script>
 
